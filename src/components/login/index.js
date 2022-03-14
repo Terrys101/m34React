@@ -8,8 +8,9 @@ export const Login = ({setUser}) => {
 
     const submitHandler = (e) =>{
         e.preventDefault();
+        if(email.includes("@")){
         setUser({username : username, email:email, pass:pass});
-    
+        }
       };
 
     return (
