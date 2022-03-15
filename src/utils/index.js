@@ -35,10 +35,11 @@ console.log(error);
 }
 };
 export const tokenLogin = async (setter) =>{
+    console.log(localStorage.getItem("myToken"))
     try {
         const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
         method: "GET",
-        Headers:{"Authorization": `Bearer ${localStorage.getItem("myToken")}`},
+        headers:{Authorization: `Bearer ${localStorage.getItem("myToken")}`},
     });
     const data = await response.json();
     setter(data.user);
