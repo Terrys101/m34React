@@ -1,4 +1,4 @@
-import "./index"
+import "./index.css"
 export const PhotoContainer = ({photo}) =>{
     return(
     <>
